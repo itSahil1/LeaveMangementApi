@@ -1,120 +1,60 @@
 Mini Leave Management System
-A clean, modern, and efficient application designed to streamline the process of managing employee leaves. This project provides a full-stack solution with a reactive frontend and a robust backend API, perfect for small to medium-sized teams looking to move away from manual leave tracking.
+A clean, modern, and efficient application designed to streamline the process of managing employee leaves.
+This project provides a full-stack solution with a reactive frontend and a robust backend API — perfect for small to medium-sized teams looking to move away from manual leave tracking.
 
 🚀 Live Demo
-Experience the live application and interact with the API using the links below.
+Frontend UI (Netlify): https://leavemanagementui.netlify.app
 
-Frontend UI (Netlify)	Backend API (Render)
-https://leavemanagementui.netlify.app/	https://leavemangementapi.onrender.com
+Backend API (Render): https://leavemangementapi.onrender.com
 
-Export to Sheets
-Note: The live backend API uses an in-memory data store. This means the data will reset periodically.
+Note: The live backend API uses an in-memory data store, so data resets periodically.
 
 ✨ Features
 Employee Management: Easily add and view employee details.
 
-Leave Application: A simple modal for employees to apply for leave.
+Leave Application: Simple modal for applying for leave.
 
-Approval Workflow: Managers/Admins can approve or reject pending leave requests with a single click.
+Approval Workflow: Approve/reject pending leave requests with one click.
 
-Leave Balance Tracking: Leave balances are automatically calculated and deducted upon approval.
+Leave Balance Tracking: Automatic deduction upon approval.
 
-Interactive Dashboard: Get a quick overview of total employees, pending requests, and upcoming leaves.
+Interactive Dashboard: Quick overview of employees, pending requests, upcoming leaves.
 
-Robust Validation: The system handles edge cases like overlapping leaves, insufficient balance, and invalid dates.
+Robust Validation: Handles overlapping leaves, insufficient balance, invalid dates.
 
 🛠️ Tech Stack
-This project is built with modern technologies, ensuring a scalable and maintainable codebase.
-
 Tier	Technology	Purpose
-Frontend	React, Vite	For a fast and interactive user interface.
-Tailwind CSS	For modern, utility-first styling.
-Lucide React	For clean and beautiful icons.
-Backend	Node.js, Express.js	For building a fast and efficient REST API.
-CORS	To handle cross-origin requests between the frontend and backend.
-Database	In-Memory Array	For simplicity in development and demo. The architecture supports PostgreSQL.
+Frontend	React, Vite	Fast, interactive user interface
+Tailwind CSS	Modern, utility-first styling
+Lucide React	Clean, beautiful icons
+Backend	Node.js, Express.js	REST API with business logic
+CORS	Handle cross-origin requests
+Database	In-Memory Array (Demo)	Simple persistence for demo (supports PostgreSQL in prod)
 
-Export to Sheets
 🏛️ Architecture
-The application follows a classic 3-Tier Architecture, which separates concerns into distinct logical layers. This makes the system secure, scalable, and easy to maintain.
+The app follows a 3-Tier Architecture:
 
-Frontend (Client): The React UI that runs in the browser.
+Frontend (Client) – React UI in the browser.
 
-Backend (Server): The Node.js/Express API that contains all business logic.
+Backend (Server) – Node.js/Express API with business logic.
 
-Database (Persistence): The data store that holds all application data.
-
-本地设置 (Local Setup)
-To run this project on your local machine, follow these steps.
-
-Prerequisites
-Node.js (v18 or higher)
-
-npm (or yarn)
-
-Installation
-Clone the repository:
-
-Bash
-
-git clone https://github.com/your-username/leave-management-system.git
-cd leave-management-system
-Setup the Backend API Server:
-
-Navigate to the backend directory.
-
-Bash
-
-cd leave-api-server
-Install the dependencies.
-
-Bash
-
-npm install
-Start the server.
-
-Bash
-
-node index.js
-🚀 The API server will be running on http://localhost:3000. Keep this terminal open.
-
-Setup the Frontend React App:
-
-Open a new terminal and navigate to the frontend directory.
-
-Bash
-
-cd leave-ui-app
-Install the dependencies.
-
-Bash
-
-npm install
-Start the development server.
-
-Bash
-
-npm run dev
-✨ Open your browser and go to the URL provided (usually http://localhost:5173).
+Database (Persistence) – Stores application data.
 
 ⚙️ API Endpoints
-The backend server provides the following RESTful API endpoints:
-
 Method	Endpoint	Description
-GET	/api/employees	Get a list of all employees.
-POST	/api/employees	Add a new employee.
-GET	/api/employees/:id/balance	Get the leave balance for a specific employee.
-GET	/api/leaves	Get a list of all leave requests.
-POST	/api/leaves	Submit a new leave application.
-PUT	/api/leaves/:id/status	Approve or reject a pending leave request.
+GET	/api/employees	Get all employees
+POST	/api/employees	Add a new employee
+GET	/api/employees/:id/balance	Get leave balance for an employee
+GET	/api/leaves	Get all leave requests
+POST	/api/leaves	Submit a leave application
+PUT	/api/leaves/:id/status	Approve or reject a leave request
 
-Export to Sheets
 📸 Screenshots
-The main dashboard providing key insights at a glance.
+Dashboard with insights
 
-A clean table showing all employees with their details.
+Employee list table
 
-An intuitive modal for applying for leaves.
+Apply leave modal
 
 📜 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Licensed under the MIT License.
