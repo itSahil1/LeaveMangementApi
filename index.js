@@ -6,8 +6,8 @@ const app = express();
 app.use(cors()); 
 app.use(express.json()); 
 
-const PORT = 3000;
 
+const PORT = process.env.PORT || 3000;
 
 let employees = [
     { id: 1, name: 'Anika Sharma', email: 'anika.sharma@example.com', department: 'Engineering', joiningDate: new Date('2023-01-15'), leaveBalance: 24 },
